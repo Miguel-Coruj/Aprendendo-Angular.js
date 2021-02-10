@@ -104,7 +104,42 @@
 
             <p>Você digitou o nome: {{ name }}</p>
         </div>
+
+        <div>
+          <input 
+              type="text" 
+              [(ngModel)]="person.name"
+          />
+
+          <input 
+              type="number" 
+              [(ngModel)]="person.age"
+          />
+
+          <p>
+            Você, 
+            {{ person.name }} tem, 
+            {{ person.age }} anos
+          </p>
+        </div>
         
     </article>
 
+</section>
+
+<section>
+  <article>
+    <h2>Input Porperty</h2>
+    <br><br>
+
+    <code>< app-input-property title="Teste Titulo" /></code>
+    <app-input-property title="Teste Titulo"></app-input-property>
+    <code>< app-input-property [title]="titleTest" /></code>
+    <br>
+
+    <app-input-property [title]="titleTest"></app-input-property>
+    <br><br><br>
+    <h2>Output Porperty</h2>
+    <app-output-property [value]="10" newValue="onNewValue($event)"></app-output-property>
+  </article>
 </section>
