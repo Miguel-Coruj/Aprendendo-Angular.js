@@ -9,12 +9,12 @@ import { InputPropertyComponent } from './input-property/input-property.componen
 import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     DataBindingComponent,
     InputPropertyComponent,
     OutputPropertyComponent,
-   ],
+  ],
   imports: [
     BrowserModule,
     FormsModule
