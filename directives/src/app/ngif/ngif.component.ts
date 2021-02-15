@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgifComponent implements OnInit {
 
+  showUsers: boolean = true
   users: string[] = []
 
+  onShowUsers() {
+    this.showUsers = !this.showUsers
+  }
   constructor() { }
 
   ngOnInit(): void {
