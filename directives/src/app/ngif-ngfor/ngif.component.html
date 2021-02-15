@@ -1,0 +1,21 @@
+<h2>*ngIf</h2>
+
+<div *ngIf="showUsers">
+    <div *ngIf="users.length === 0" class="alert alert alert-info">Não há usuários na lista</div>
+    <table>
+        <tr>
+            <td>Nome do Usuário</td>
+            <td>Id</td>
+        </tr>
+        <tr *ngFor="let user of users, let i = index">
+            <td>
+                {{ user }}
+            </td>
+            <td>
+                {{ i + 1 }}
+            </td>
+        </tr>
+    </table>
+</div>
+
+<button class="btn btn-secondary" (click)="onShowUsers()">Mostrar/Ocultar Usuários</button>
